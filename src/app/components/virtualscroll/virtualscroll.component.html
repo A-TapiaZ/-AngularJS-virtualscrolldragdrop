@@ -1,0 +1,34 @@
+
+
+<div class="container">
+
+  <h1>Virtual Scroll</h1>
+  <hr>
+
+  <div class="row">
+    
+    <div class="col">
+      <button (click)="irFinal()" class="btn btn-outline-primary">Final</button>
+    </div>
+    <div class="col text-center">
+      <button (click)="irMedio()" class="btn btn-outline-secondary">Medio</button>
+    </div>
+    <div class="col text-right">
+      <button (click)="irInicio()" class="btn btn-outline-info">Inicio</button>
+    </div>
+    
+  </div>
+  <br>
+
+
+  <cdk-virtual-scroll-viewport class="list-container list-group" itemSize="50">
+
+    <!-- En tepria esto es lo que vamos a repetir -->
+    <div class="list-group-item" *cdkVirtualFor="let persona of personas;let i=index;let counter=count">
+      Item {{i}}/{{counter}}
+
+    </div>
+
+
+  </cdk-virtual-scroll-viewport>
+</div>

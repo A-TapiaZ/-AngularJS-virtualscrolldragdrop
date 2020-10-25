@@ -1,0 +1,23 @@
+<div class="container mt-5">
+
+  <!-- Ejemplo sencillo -->
+  <!-- <div class="caja" cdkDrag>
+    Drag me 
+  </div> -->
+
+  <h1>Paises</h1>
+  <hr>
+
+  <!-- Este evento lo que hace es que cuando detecta que arrastraron un elemento y lo soltaron, dispara la funcion con el evento de argumento -->
+  <ul class="list-group" cdkDropList (cdkDropListDropped)="drop($event)">
+
+    <li 
+      class="list-group-item" 
+      *ngFor="let pais of Listapaises"
+      cdkDrag>
+      {{pais.name}}
+    </li>
+
+  </ul>
+
+</div>
